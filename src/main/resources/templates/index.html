@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.6/css/mdb.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Titulo da página</title>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 text-center>Calculadora Simples</h1>
+            <label th:text="${resultado}"></label>
+            <form action="/calcularvalor" method="post" class="text-center">
+                <select class="browser-default custom-select"  name="tipo">
+                    <option value="" disabled selected>Tipo de Calculo</option>
+                    <option value="1">Somar</option>
+                    <option value="2">Subtrair</option>
+                    <option value="3">Multiplicar</option>
+                    <option value="4">dividir</option>
+                </select>
+                <div class="row text-center">
+                    <div class="col-4">
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="valor1" name="valor1" class="form-control">
+                        <label for="valor1">Numero 1</label>
+                    </div>
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" id="valor2" name="valor2" class="form-control">
+                        <label for="valor2">Numero 2</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-primary waves-effect">Calcular</button>
+                </div>
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.6/js/mdb.min.js"></script>
+</body>
+</html>
